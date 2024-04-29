@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* ROOT VARIABLES */
+:root {
+  /* default colours */
+  --color-bg: #bed3ea;
+  --color-nav-box: #93aecc9e;
+  --color-green: #b8efe7;
+  --color-red: #ff6673;
+  --color-darkgreen: #11998e;
+
+  --color-text-1: #000422;
+  --color-text-2: #ffffff;
+  --color-text-3: #8d9ca5;
+
+  --border-radius-1: 2rem;
+  --border-radius-2: 0.4rem;
+  --border-radius-3: 0.8rem;
+
+  --box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.072);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--color-text-1);
+}
+
+.page {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  padding: 1rem;
+  background-color: var(--color-bg);
+}
+
+.active {
+  display: block;
+}
+
+/*********************
+****** SIDE BAR *****/
+
+/* SIDEBAR: styling */
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 12rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--color-nav-box);
+  box-shadow: var(--box-shadow);
+}
+
+#sidebar li a {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  margin: 2rem auto;
+}
+
+#sidebar li a:hover {
+  background-color: #11998e;
+  color: var(--color-text-2);
+  box-shadow: var(--box-shadow);
+}
+
+/* SIDEBAR: avatar styling */
+#avatar {
+  display: block;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+#userAvatar {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--color-darkgreen);
+  border-radius: 0.8rem;
+}
+
+#avatar p {
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+#download {
+  position: absolute;
+  bottom: 0;
+  background: none;
+  border: none;
+  padding: 0.6rem;
+}
+
+#download:hover {
+  background-color: var(--color-red);
+  border-radius: var(--border-radius-2);
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  top: 0;
+  left: 12rem;
+  min-height: 100vh;
+  width: calc(100% - 12rem);
+}
+
+/********************
+*** MOOD TRACKER ****
+********************/
+
+.moodTrackerClass {
+  background-color: var(--color-nav-box);
+  border-radius: var(--border-radius-2);
+  min-height: 6rem;
+}
+
+#moodForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.moodIcon {
+  margin: 0 1rem;
+}
+
+.moodIcon:hover {
+  cursor: pointer;
+  background-color: var(--color-green);
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius-2);
+}
+
+.moodInfo {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* MIDDLE PART */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/* MIDDLE LEFT: SYMPTOMS */
+.symptoms {
+  min-height: fit-content;
+  min-width: fit-content;
+  background-color: var(--color-nav-box);
+  border-radius: var(--border-radius-2);
+  padding: 0.8rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.symptomsForm {
+  margin-top: 1rem;
+}
+
+.sympt {
+  margin-bottom: 0.5rem;
+}
+
+.sympt:hover {
+  cursor: pointer;
+}
+
+/* MIDDLE RIGHT: SMALL CALENDAR */
+.smallCalendar {
+  min-height: fit-content;
+  width: 32rem;
+  background-color: var(--color-nav-box);
+  border-radius: var(--border-radius-2);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.DBY,
+.DAT,
+.yesterday,
+.tomorrow {
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  margin: 3rem 1rem 1rem 1rem;
+}
+
+.today {
+  height: 6rem;
+  width: 6rem;
+  background-color: var(--color-darkgreen);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.dayOfCycle {
+  height: 2rem;
+  width: 96%;
+  margin-left: 2%;
+  background-color: var(--color-green);
+  border-radius: var(--border-radius-2);
+}
+
+/********************
+**** CYCLE INFO *****
+********************/
+
+.cycleInfoView {
+  display: block;
+  margin: 0 auto;
+}
+
+.cycleInfoDiv,
+.periodHistory {
+  height: max-content;
+  width: max-content;
+  background-color: var(--color-nav-box);
+  border-radius: var(--border-radius-3);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+/* CYCLE INFORMATION */
+form {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+.firstDayDiv,
+.lastDayDiv {
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin: 1rem;
+}
+
+label p {
+  margin-bottom: 0.8rem;
+}
+
+#firstDay,
+#lastDay {
+  display: block;
+  margin: 0.4rem auto;
+  border-radius: var(--border-radius-2);
+  border-color: var(--color-nav-box);
+  border-width: 0.4rem;
+  font-size: 1rem;
+}
+
+#submitBtnID {
+  width: max-content;
+  height: max-content;
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--color-darkgreen);
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--box-shadow);
+  border-style: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-2);
+}
+
+#submitBtnID:hover {
+  background-color: #137068;
+  cursor: pointer;
+}
+
+/* PAST PERIODS */
+
+.periodHistory {
+  margin-top: 2rem;
+  width: 20rem;
+  height: 16rem;
+}
+
+.pastPeriodsUL {
+  width: 90%;
+  height: 50%;
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--box-shadow);
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.pastPeriodsUL li {
+  text-wrap: nowrap;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.2rem;
+}
+
+.pastPeriodsUL li:hover {
+  background-color: var(--color-nav-box);
+}
+
+
+

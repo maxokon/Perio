@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+     <!-- MATERIAL SYMBOLS FROM GOOGLE -->
+     <link
+     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <title>Perio</title>
+  </head>
+  <body>
+    <main>
+        <!-- MOOD TRACKER -->
+        <div class="page active" id="moodTracker">
+            <ol id="sidebar">
+                <li id="avatar">
+                    <img src="/img/user.png" alt="generic user picture" id="userAvatar" />
+                    <p id="usernameID">Username</p>
+                </li>
+                <li>
+                    <a href="#" data-target="moodTracker" class="navLink"
+                    >MOOD TRACKER</a>
+                </li>
+                <li>
+                    <a href="#" data-target="cycleInfo" class="navLink">CYCLE INFO</a>
+                </li>
+                <!-- DOWNLOAD BUTTON-->
+                <button type="submit" id="download"><i class="material-symbols-outlined">download</i></button>
+            </ol>
+            <div class="content">
+                    <!-- MOOD CHOICES -->
+                <div class="moodTrackerClass">
+                  <form id="moodForm">
+     
+                    <!-- happy -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="happy" 
+                        value="HAPPY"
+                      />
+                      <label for="happy">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">
+                          sentiment_very_satisfied
+                          <p class="moodInfo">HAPPY</p>
+                        </i>
+                      </label>
+                    </div>
+
+                    <!-- excited -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="excited" 
+                        value="EXCITED"
+                      />
+                      <label for="excited">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">
+                          sentiment_excited
+                          <p class="moodInfo">EXCITED</p>
+                        </i>
+                      </label>
+                    </div>
+            
+                    <!-- ok -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood"
+                        name="ok" 
+                        value="OK"
+                      />
+                      <label for="ok">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">
+                          sentiment_satisfied
+                          <p class="moodInfo">OK</p>
+                        </i>
+                      </label>
+                    </div>
+            
+                    <!-- sad -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="sad" 
+                        value="SAD" 
+                      />
+                      <label for="sad">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">
+                          sentiment_dissatisfied
+                          <p class="moodInfo">SAD</p>
+                        </i>
+                      </label>
+                    </div>
+            
+                    <!-- upset -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="upset" 
+                        value="UPSET" 
+                      />
+                      <label for="upset">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;"> 
+                          sentiment_sad
+                          <p class="moodInfo">UPSET</p>
+                        </i>
+                      </label>
+                    </div>
+            
+                    <!-- annoyed -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="annoyed" 
+                        value="ANNOYED" 
+                      />
+                      <label for="annoyed">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">  sentiment_extremely_dissatisfied 
+                          <p class="moodInfo">ANNOYED</p>
+                        </i>
+                      </label>
+                    </div>
+                    
+                    <!-- stressed -->
+                    <div class="moodIcon">
+                      <input
+                        type="checkbox"
+                        class="mood"
+                        name="stressed"
+                        value="STRESSED"
+                      />
+                      <label for="stressed">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem">
+                          sentiment_stressed
+                          <p class="moodInfo">STRESSED</p>
+                        </i>
+                      </label>
+                    </div>
+
+                    <!-- worried -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="worried" 
+                        value="WORRIED"
+                      />
+                      <label for="worried">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">
+                          sentiment_worried
+                          <p class="moodInfo">WORRIED</p>
+                        </i>
+                      </label>
+                    </div>
+                                
+                    <!-- sick -->
+                    <div class="moodIcon">
+                      <input 
+                        type="checkbox" 
+                        class="mood" 
+                        name="sick" 
+                        value="SICK"
+                      />
+                      <label for="sick">
+                        <i class="material-symbols-outlined"
+                          style="font-size: 5rem;">
+                          sick
+                          <p class="moodInfo">SICK</p>
+                        </i>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="container">
+                    <!-- SYMPTOM CHECKLIST -->
+                    <div class="symptoms">
+                        <h3>SYMPTOMS CHECKLIST</h3>
+                        <form class="symptomsForm">
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="headache" 
+                            value="HEADACHE">
+                            <label for="headache">HEADACHE</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="cramps" 
+                            value="CRAMPS">
+                            <label for="cramps">CRAMPS</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="fatigue" 
+                            value="FATIGUE">
+                            <label for="fatigue">FATIGUE</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="cravings" 
+                            value="CRAVINGS">
+                            <label for="cravings">CRAVINGS</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="insomnia" 
+                            value="INSOMNIA">
+                            <label for="insomnia">INSOMNIA</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="acne" 
+                            value="ACNE">
+                            <label for="acne">ACNE</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="backache" 
+                            value="BACKACHE">
+                            <label for="backache">BACKACHE</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="nausea" 
+                            value="NAUSEA">
+                            <label for="nausea">NAUSEA</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="illness" 
+                            value="ILLNESS">
+                            <label for="illness">ILLNESS</label></br>
+                
+                            <input 
+                            type="checkbox" 
+                            class="sympt" 
+                            name="mood-swings" 
+                            value="MOOD SWINGS">
+                            <label for="mood-swings">MOOD SWING</label></br>
+                        </form>
+                    </div>
+
+                    <!-- SMALL CALENDAR -->
+                    <div class="smallCalendar">
+        
+                        <div class="DBY"> <!-- Day Before Yesterday -->
+                        <p class="DBYDate"></p>
+                        </div> 
+
+                        <div class="yesterday">
+                        <p class="yesterdayDate"></p>
+                        </div>
+
+                        <div class="today">
+                        <p class="todayDate"></p>
+                        </div>
+
+                        <div class="tomorrow">                        <p class="tomorrowDate"></p>
+                        </div>
+
+                        <div class="DAT"> <!-- Day After Tomorrow--> 
+                        <p class="DATDate"></p>
+                        </div> 
+                        <div class="dayOfCycle">
+                        <p>DAY OF THE CYCLE: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CYCLE INFO -->
+        <div class="page" id="cycleInfo">
+            <ol id="sidebar">
+                <li id="avatar">
+                    <img src="/img/user.png" alt="generic user picture" id="userAvatar" />
+                    <p>Username</p>
+                </li>
+                <li>
+                    <a href="#" data-target="moodTracker" class="navLink"
+                    >MOOD TRACKER</a>
+                </li>
+
+                <li>
+                    <a href="#" data-target="cycleInfo" class="navLink">CYCLE INFO</a>
+                </li>
+                <!-- DOWNLOAD BUTTON-->
+                <button type="submit" id="download"><i class="material-symbols-outlined">download</i></button>
+            </ol>
+            <div class="content">
+              <div class="cycleInfoView">
+                <!-- PERIOD DATES -->
+                <div class="cycleInfoDiv">
+                    <div class="header">
+                        <p>PERIOD INFORMATION</p> 
+                    </div>
+                    <form class="periodForm">
+                        <div class="firstDayDiv">
+                            <label for="firstDay"><p>FIRST DAY OF YOUR PERIOD:</p></label>
+                            <input type="date" id="firstDay" name="firstDay" required /> 
+                        </div>
+    
+                        <div class="lastDayDiv">
+                            <label for="lastDay"><p>LAST DAY OF YOUR PERIOD:</p></label>
+                            <input type="date" id="lastDay" name="lastDay" required />
+                        </div>
+                        <button type="submit" id="submitBtnID">SUBMIT PERIOD DATES</button>
+                    </form>
+                </div>
+   
+  
+              <!-- PERIOD HISTORY -->
+              <div class="periodHistory" id="periodHistoryID">
+                <div class="header">
+                    <p>PAST PERIODS</p>
+                </div>
+                <ul class="pastPeriodsUL"></ul>
+              </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
